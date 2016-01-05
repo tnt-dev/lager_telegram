@@ -1,0 +1,12 @@
+{application, lager_telegram,
+ [{description, "Telegram backend for Lager"},
+  {vsn, "0.1.0"},
+  {modules, []},
+  {applications, [kernel,
+                  stdlib,
+                  crypto,
+                  public_key,
+                  ssl,
+                  inets]},
+  {registered, []}
+ ]}.
