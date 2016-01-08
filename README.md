@@ -1,5 +1,10 @@
 # Lager Telegram backend
 
+[![Build Status][travis-img]][travis]
+
+[travis]: https://travis-ci.org/tnt-dev/lager_telegram
+[travis-img]: https://travis-ci.org/tnt-dev/lager_telegram.svg
+
 This is a Telegram backend for Lager. It sends Lager logs using Telegram bots.
 
 ## Usage
