@@ -36,7 +36,11 @@ init(Args) ->
                 retry_interval=RetryInterval * 1000}}.
 
 handle_call({set_loglevel, Level}, State) ->
-    {ok, ok, State#state{level=lager_util:level_to_num(Level)}};
+    try lager_util:config_to_mask(Level) of
+        Levels -> {ok, ok, State#state{level=Levels}}
+    catch
+        _:_ -> {ok, {error, bad_log_level}, State}
+    end;
 handle_call(get_loglevel, #state{level=Level}=State) ->
     {ok, Level, State};
 handle_call(_Request, State) ->
