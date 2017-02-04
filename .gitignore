@@ -1,4 +1,6 @@
+_build
 deps
 ebin
 erl_crash.dump
-.rebar
+rebar
+rebar3
