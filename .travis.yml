@@ -1,5 +1,7 @@
 language: erlang
 otp_release:
+  - 19.2
+  - 19.0
   - 18.2
   - 18.0
   - 17.5
@@ -7,9 +9,6 @@ otp_release:
   - R16B03-1
   - R16B01
   - R16B
-  - R15B03
-  - R15B01
-  - R15B
 
 before_install:
    - wget https://s3.amazonaws.com/rebar3/rebar3
